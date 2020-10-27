@@ -1,21 +1,91 @@
 .navbar {
-    background-color: #494950;
+    background-color: #3c4857;
     display: flex;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 .navbar__btn {
-    width: 40px;
-    height: 40px;
-    padding: 6px;
+    width: 50px;
+    height: 50px;
+    padding: 9px;
     border-radius: 4px;
-    transition: .1s;
+    transition: all 0.1s ease 0s;
     cursor: pointer;
 }
 
 .navbar__btn:hover {
-    background-color: #5d5d63;
+    background-color: #ffffff12;
+}
+
+.navbar__find-container {
+    flex: 1;
 }
 
 .navbar__find {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 9px 10px;
+    margin-left: 20px;
+    width: 300px;
+    transition: .1s;
+}
+
+@media only screen and (max-width: 660px) {
+    .navbar__find {
+        width: 94%;
+    }
+}
+
+.navbar__find:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.navbar__find-img {
+    height: 14px;
+    margin-right: 10px;
+    filter: invert(1);
+    margin-left: 4px;
+    opacity: .8;
+}
+
+.navbar__find-input {
+    color: #ffffffc4;
+    width: 100%;
+}
+
+.navbar__find-input::placeholder {
+    color: #ffffff8f;
+}
+
+.navbar__username {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffffbd;
+    padding: 9px 13px;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 660px) {
+    .navbar__username {
+        display: none;
+    }
+}
+
+.navbar__settings {
+    height: 26px;
+    margin-right: 10px;
+    filter: invert(1);
+    margin-left: 4px;
+    opacity: .8;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 660px) {
+    .navbar__settings {
+        display: none;
+    }
 }

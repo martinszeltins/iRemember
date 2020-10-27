@@ -2,9 +2,11 @@
     <div class="navbar">
         <img class="navbar__btn" src="/img/logo-hallow.svg" />
 
-        <div class="navbar__find">
-            <img class="navbar__find-img" src="/img/find.svg">
-            <input class="navbar__find-input" type="text" placeholder="Find" />
+        <div class="navbar__find-container">
+            <div class="navbar__find">
+                <img class="navbar__find-img" src="/img/find.svg">
+                <input class="navbar__find-input" type="text" placeholder="Find" />
+            </div>
         </div>
 
         <div class="navbar__username">Mārtiņš Zeltiņš</div>

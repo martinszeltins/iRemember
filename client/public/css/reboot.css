@@ -265,6 +265,16 @@ input[type="month"] {
   -webkit-appearance: listbox;
 }
 
+input[type="text"] {
+    border: 0;
+    background: transparent;
+}
+
+input[type="text"]:focus {
+    border: 0;
+    outline: none;
+}
+
 textarea {
   overflow: auto;
   resize: vertical;
