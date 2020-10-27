@@ -8,6 +8,12 @@ import '/css/style.css'
 
 const app = createApp(App)
 
+app.directive('focus', {
+    mounted(el, binding, vnode) {
+        el.focus()
+    }
+})
+
 app.use(store)
 app.use(routes)
 
