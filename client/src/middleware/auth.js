@@ -1,5 +1,4 @@
-export default function auth({ next, router }) {
-
+export default function auth({ to, next, router }) {
     let isAuthenticated = true
 
     if (!isAuthenticated) {

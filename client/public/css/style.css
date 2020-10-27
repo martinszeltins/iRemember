@@ -8,11 +8,16 @@
     white-space: nowrap;
     cursor: pointer;
     transition: .1s;
+    user-select: none;
 }
 
 .app-button:hover {
     background-color: #3c4857;
     color: #fff;
+}
+
+.app-button:active:hover {
+    filter: brightness(1);
 }
 
 .app-button--login {
@@ -249,7 +254,7 @@
 
 /** Login **/
 .login-page {
-    background-color: #fafafa;
+    background-color: #f4f4f6;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -259,7 +264,6 @@
 .login-box {
     background: #fff;
     border-radius: 10px;
-    border: solid 1px #dbdbdb;
     padding: 50px 50px;
     width: 600px;
 }

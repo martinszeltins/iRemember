@@ -22,10 +22,16 @@
 </template>
 
 <script>
+    import { ref, onMounted } from 'vue' 
+
     export default {
         setup()
         {
-            
+            const title = ref('iRemember - login')
+
+            onMounted(() => {
+                document.title = title.value
+            })
         },
     }
 </script>
