@@ -15,8 +15,6 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
-        return 'yay!';
-        
         $user = User::where('username', $request->username)->first();
 
         if (!$user) {
@@ -68,6 +66,7 @@ class AuthController extends Controller
         $user->username = request('username');
         $user->password = bcrypt(request('password'));
         $user->save();
+
 
         auth()->login($user);
 

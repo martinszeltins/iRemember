@@ -9,10 +9,10 @@
             <div class="login-box__title">Log in</div>
 
             <div class="login-box__label">Username</div>
-            <input v-focus class="login-box__input" />
+            <input v-model="username" v-focus class="login-box__input" />
 
             <div class="login-box__label">Password</div>
-            <input class="login-box__input" type="password" />
+            <input v-model="password" class="login-box__input" type="password" />
 
             <div
                 @click="login"
@@ -50,7 +50,7 @@
             }
 
             return {
-                login
+                login, username, password
             }
         },
     }
