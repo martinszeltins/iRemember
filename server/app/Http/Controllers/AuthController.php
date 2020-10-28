@@ -10,8 +10,17 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
+    /**
+     * Log in a user
+     */
     public function login(Request $request)
     {
+        $user = User::where('username', $request->username)->first();
+
+        if (!$user) {
+            return $this->register();
+        }
+
         try {
             $credentials = request(['username', 'password']);
 
@@ -22,8 +31,6 @@ class AuthController extends Controller
                     'message' => 'Unauthorized'
                 ]);
             }
-
-            $user = User::where('username', $request->username)->first();
 
             if (!Hash::check($request->password, $user->password, [])) {
                 throw new Exception('Error in Login');
@@ -43,5 +50,31 @@ class AuthController extends Controller
                 'error' => $error,
             ]);
         }
+    }
+
+    /**
+     * Register a user
+     */
+    public function register()
+    {
+        request()->validate([
+            'username' => 'required',
+            'password' => 'required'
+        ]);
+
+        $user = new User;
+        $user->username = request('username');
+        $user->password = bcrypt(request('password'));
+        $user->save();
+
+        auth()->login($user);
+
+        $token = $user->createToken('authToken')->plainTextToken;
+
+        return response()->json([
+            'status_code' => 200,
+            'access_token' => $token,
+            'token_type' => 'Bearer',
+        ]);
     }
 }
