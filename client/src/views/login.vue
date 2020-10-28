@@ -32,12 +32,13 @@
         setup()
         {
             const title = ref('iRemember - login')
-            const username = ref('')
-            const password = ref('')
 
             onMounted(() => {
                 document.title = title.value
             })
+
+            const username = ref('')
+            const password = ref('')
 
             async function login()
             {
