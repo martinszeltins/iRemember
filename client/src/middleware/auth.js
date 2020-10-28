@@ -1,7 +1,5 @@
 export default function auth({ to, next, router }) {
-    let isAuthenticated = true
-
-    if (!isAuthenticated) {
+    if (!localStorage.getItem('token')) {
         return next('/login')
     }
 
