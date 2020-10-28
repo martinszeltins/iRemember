@@ -8,7 +8,9 @@ class Auth
                 body: JSON.stringify(data),
             })
 
-            return await response.json()
+            return response
+
+            // return await response.json()
         } catch (error) {
             
         }
