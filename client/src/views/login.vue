@@ -15,7 +15,7 @@
             <input class="login-box__input" type="password" />
 
             <div class="app-button app-button--login">
-                Log in
+                Log in or Register
             </div>
         </div>
     </div>
