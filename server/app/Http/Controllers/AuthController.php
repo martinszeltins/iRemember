@@ -28,25 +28,26 @@ class AuthController extends Controller
             {
                 return response()->json([
                     'status_code' => 500,
-                    'message' => 'Unauthorized'
+                    'message' => 'Unauthorized',
                 ]);
             }
 
             if (!Hash::check($request->password, $user->password, [])) {
-                throw new Exception('Error in Login');
+                throw new Exception('Error occured while loggin in.');
             }
 
             $token = $user->createToken('authToken')->plainTextToken;
 
             return response()->json([
                 'status_code' => 200,
+                'message' => 'Success',
                 'access_token' => $token,
                 'token_type' => 'Bearer',
             ]);
         } catch (Exception $error) {
             return response()->json([
                 'status_code' => 500,
-                'message' => 'Error in Login',
+                'message' => 'Error occured while loggin in.',
                 'error' => $error,
             ]);
         }
@@ -67,13 +68,13 @@ class AuthController extends Controller
         $user->password = bcrypt(request('password'));
         $user->save();
 
-
         auth()->login($user);
 
         $token = $user->createToken('authToken')->plainTextToken;
 
         return response()->json([
             'status_code' => 200,
+            'message' => 'Success',
             'access_token' => $token,
             'token_type' => 'Bearer',
         ]);
