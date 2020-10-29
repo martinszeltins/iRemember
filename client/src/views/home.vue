@@ -19,10 +19,5 @@
             AppSidebar,
             AppTasks,
         },
-
-        setup()
-        {
-            
-        },
     }
 </script>

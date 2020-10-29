@@ -1,5 +1,7 @@
 export default function auth({ to, next, router }) {
-    if (!localStorage.getItem('token')) {
+    let user = localStorage.getItem('iremember_user')
+
+    if (!user) {
         return next('/login')
     }
 

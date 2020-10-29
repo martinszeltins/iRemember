@@ -7,7 +7,7 @@ import auth from './middleware/auth.js'
 const routes = [
     {
         path: "/",
-        name: "Home",
+        name: "home",
         component: Home,
         meta: {
             middleware: [ auth ],
@@ -16,7 +16,7 @@ const routes = [
 
     {
         path: "/login",
-        name: "Login",
+        name: "login",
         component: Login,
     },
 ]

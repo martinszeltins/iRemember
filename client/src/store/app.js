@@ -7,4 +7,14 @@ export default {
             
         }
     },
+
+    actions: 
+    {
+        
+    },
+
+    mutations:
+    {
+        
+    },
 }

@@ -9,8 +9,25 @@
             </div>
         </div>
 
-        <div class="navbar__username">Mārtiņš Zeltiņš</div>
+        <div class="navbar__username">{{ user.username }}</div>
 
         <img class="navbar__settings" src="/img/settings.svg" />
     </div>
 </template>
+
+<script>
+    import { useStore } from 'vuex'
+
+    export default {
+        setup()
+        {
+            const store = useStore()
+
+            const user = store.state.user.user
+
+            return {
+                user
+            }
+        }
+    }
+</script>

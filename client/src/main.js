@@ -5,6 +5,7 @@ import store from './store/index.js'
 import '/css/reboot.css'
 import '/css/material-icons.css'
 import '/css/style.css'
+import { restoreSession } from './composition/useSession.js'
 
 const app = createApp(App)
 
@@ -16,5 +17,7 @@ app.directive('focus', {
 
 app.use(store)
 app.use(routes)
+
+restoreSession()
 
 app.mount('#app')
