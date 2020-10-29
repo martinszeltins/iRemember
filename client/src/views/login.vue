@@ -38,73 +38,24 @@
 </template>
 
 <script>
-    import { useStore } from 'vuex'
-    import Auth from '../api/Auth.js'
+    import { onMounted } from 'vue'
     import router from '../routes.js'
-    import { ref, onMounted } from 'vue'
-    import useNotification from '../composition/useNotification.js'
+    import useAuth from '../composition/useAuth.js'
 
     export default {
         setup()
         {
+            const { login, username, password, isLoading } = useAuth()
+
             onMounted(() => {
                 document.title = 'iRemember - login'
 
-                if (localStorage.getItem('token')) {
+                if (localStorage.getItem('iremember_user')) {
                     router.push({
                         name: "home"
                     })
                 }
             })
-
-            const store = useStore()
-            const { showNotification } = useNotification()
-
-            const username = ref('')
-            const password = ref('')
-            const isLoading = ref(false)
-
-            async function login()
-            {
-                isLoading.value = true
-
-                const result = await Auth.login({
-                    username: username.value,
-                    password: password.value,
-                })
-
-                isLoading.value = false
-
-                if (result.status_code == 200)
-                {
-                    let user = { ...result.user, token: result.access_token }
-
-                    store.dispatch('user/setUser', user)
-
-                    router.push({
-                        name: "home"
-                    })
-
-                    return
-                }
-
-                showErrorMessage(result.message)
-            }
-
-            function showErrorMessage(message)
-            {
-                if (message == 'Unauthorized') {
-                    showNotification({
-                        title: 'Wrong username or password',
-                        description: 'The username or password you entered is not correct.',
-                    })
-                } else {
-                    showNotification({
-                        title: 'Something went wrong',
-                        description: 'Oops! Something went wrong while logging in.',
-                    })
-                }
-            }
 
             return {
                 login, username, password, isLoading

@@ -43,6 +43,7 @@ class AuthController extends Controller
                 'message' => 'Success',
                 'access_token' => $token,
                 'token_type' => 'Bearer',
+                'user' => $user,
             ]);
         } catch (Exception $error) {
             return response()->json([
@@ -77,6 +78,7 @@ class AuthController extends Controller
             'message' => 'Success',
             'access_token' => $token,
             'token_type' => 'Bearer',
+            'user' => $user,
         ]);
     }
 }

@@ -4,6 +4,11 @@ function useNotification()
 {
     const store = useStore()
 
+    /**
+     * Show notification
+     * 
+     * @param notification object
+     */
     function showNotification(notification)
     {
         store.dispatch('notification/showNotification', notification)
@@ -13,11 +18,15 @@ function useNotification()
         }, 4000)
     }
 
+    /**
+     * Hide notification
+     */
     function hideNotification()
     {
         store.dispatch('notification/hideNotification')
     }
 
+    
     return {
         showNotification, hideNotification
     }
