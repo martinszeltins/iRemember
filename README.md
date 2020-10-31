@@ -1,4 +1,8 @@
 # iRemember
-No longer forget to do that important thing with iRemember!
 
-Documentation.
+````
+$ cd iRemember
+$ docker-compose up -d
+````
+
+The app will be running at ````http://localhost:28874/````
