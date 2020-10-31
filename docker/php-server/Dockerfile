@@ -34,10 +34,7 @@ RUN docker-php-ext-install bcmath
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-#RUN composer install
-
-#RUN php /var/www/artisan migrate --seed
-
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
-CMD ["php-fpm"]
+
+CMD bash -c "composer install && php artisan migrate --seed && php-fpm"
