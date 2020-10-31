@@ -3,6 +3,7 @@
 **Instructions**
 
 ````
+$ git clone https://github.com/martinszeltins/iRemember.git
 $ cd iRemember
 $ docker-compose up -d
 ````
