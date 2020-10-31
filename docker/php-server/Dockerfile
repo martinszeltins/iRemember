@@ -31,10 +31,14 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg
 RUN docker-php-ext-install gd
 RUN docker-php-ext-install bcmath
 
+# Permissions for Laravel
+RUN chown -R www-data:www-data /var/www
+RUN chmod -R 777 /var/www
+
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
 
-CMD bash -c "composer install && php artisan migrate --seed && php-fpm"
+CMD bash -c "composer install && chmod -R 777 /var/www && php artisan migrate --seed && php-fpm"
