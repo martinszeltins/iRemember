@@ -1,9 +1,13 @@
+import useEnv from '../composition/useEnv.js'
+
 class Auth
 {
     static async login(data)
     {
+        const { env } = useEnv()
+
         try {
-            const response = await fetch('http://localhost:49691/login', {
+            const response = await fetch(`${env('VITE_API_URL')}/login`, {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: {

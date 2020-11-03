@@ -1,8 +1,17 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoriesController;
 
-Route::post('login', [AuthController::class, 'login']);
-Route::post('register', [AuthController::class, 'register']);
+/**
+ * Authentication
+ */
+Route::post('login',        [AuthController::class, 'login']);
+Route::post('register',     [AuthController::class, 'register']);
+
+
+/**
+ * Categories
+ */
+Route::get('categories',    [CategoriesController::class, 'index']);

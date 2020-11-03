@@ -73,6 +73,16 @@ function useAuth()
     }
 
     /**
+     * Check if user is logged in
+     * 
+     * @return boolean
+     */
+    function userLoggedIn()
+    {
+        return localStorage.getItem('iremember_user') !== null
+    }
+
+    /**
      * Show error if login was unsuccessful
      * 
      * @param message string
@@ -92,8 +102,20 @@ function useAuth()
         }
     }
 
+    /**
+     * Restore session after page reload
+     */
+    function restoreSession()
+    {
+        let user = localStorage.getItem('iremember_user')
+
+        if (user) {
+            store.dispatch('user/setUser', JSON.parse(user))
+        }
+    }
+
     return {
-        login, username, password, isLoading
+        login, username, password, isLoading, userLoggedIn, restoreSession
     }
 }
 

@@ -45,15 +45,13 @@
     export default {
         setup()
         {
-            const { login, username, password, isLoading } = useAuth()
+            const { login, username, password, isLoading, userLoggedIn } = useAuth()
 
             onMounted(() => {
                 document.title = 'iRemember - login'
 
-                if (localStorage.getItem('iremember_user')) {
-                    router.push({
-                        name: "home"
-                    })
+                if (userLoggedIn()) {
+                    router.push({ name: "home" })
                 }
             })
 
