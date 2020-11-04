@@ -38,7 +38,6 @@
 </template>
 
 <script>
-    import { onMounted } from 'vue'
     import router from '../routes.js'
     import useAuth from '../composition/useAuth.js'
 
@@ -47,13 +46,11 @@
         {
             const { login, username, password, isLoading, userLoggedIn } = useAuth()
 
-            onMounted(() => {
-                document.title = 'iRemember - login'
+            document.title = 'iRemember - login'
 
-                if (userLoggedIn()) {
-                    router.push({ name: "home" })
-                }
-            })
+            if (userLoggedIn()) {
+                router.push({ name: "home" })
+            }
 
             return {
                 login, username, password, isLoading

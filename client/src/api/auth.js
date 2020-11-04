@@ -1,19 +1,18 @@
 import useEnv from '../composition/useEnv.js'
+import useHTTP from '../composition/useHTTP.js'
 
 class Auth
 {
     static async login(data)
     {
         const { env } = useEnv()
+        const { jsonHeaders } = useHTTP()
 
         try {
             const response = await fetch(`${env('VITE_API_URL')}/login`, {
                 method: 'POST',
                 body: JSON.stringify(data),
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                },
+                headers: jsonHeaders,
             })
 
             return await response.json()

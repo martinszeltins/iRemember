@@ -34,10 +34,6 @@
             onMounted(() => {
                 store.dispatch('categories/fetch')
             })
-
-            return {
-                
-            }
         },
     }
 </script>

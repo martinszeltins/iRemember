@@ -1,7 +1,8 @@
 <?php
 
-use App\Models\Category;
 namespace App\Http\Controllers;
+
+use App\Models\Category;
 
 class CategoriesController extends Controller
 {
@@ -16,8 +17,8 @@ class CategoriesController extends Controller
      * @param  Category  $category
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function index(Category $category)
+    public function index()
     {
-        return $category->all();
+        return Category::where('user_id', request('user_id'))->get();
     }
 }

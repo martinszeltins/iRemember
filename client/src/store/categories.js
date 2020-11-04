@@ -1,3 +1,5 @@
+import Categories from '../api/categories.js'
+
 export default {
     namespaced: true,
 
@@ -10,13 +12,13 @@ export default {
 
     actions:
     {
-        async fetch({ commit })
+        async fetch({ commit, rootState })
         {
-            // const categories = await Categories.fetch({
-            //     user_id: ???????
-            // })
+            const categories = await Categories.fetch({
+                user_id: rootState.user.id
+            })
 
-            // commit('fetch', categories)
+            commit('fetch', categories)
         },
     },
 

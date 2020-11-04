@@ -23,7 +23,7 @@
         {
             const store = useStore()
 
-            const user = store.state.user.user
+            const user = store.state.user
 
             return {
                 user

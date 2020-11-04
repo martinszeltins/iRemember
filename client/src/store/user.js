@@ -4,8 +4,7 @@ export default {
     state()
     {
         return {
-            loggedIn: false,
-            user: {},
+            
         }
     },
 
@@ -21,7 +20,8 @@ export default {
     {
         setUser(state, user)
         {
-            state.user = user
+            Object.assign(state, { ...user });
+
             localStorage.setItem('iremember_user', JSON.stringify(user))
         },
     },
