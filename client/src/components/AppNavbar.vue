@@ -17,13 +17,14 @@
 
 <script>
     import { useStore } from 'vuex'
+    import { computed } from 'vue'
 
     export default {
         setup()
         {
             const store = useStore()
 
-            const user = store.state.user
+            const user = computed(() => store.state.user)
 
             return {
                 user

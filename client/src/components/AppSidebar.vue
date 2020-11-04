@@ -1,18 +1,14 @@
 <template>
     <div class="app-sidebar">
-        <div class="app-sidebar__item">
-            <div class="app-sidebar__dot app-sidebar__dot--priority"></div>
-            <div class="app-sidebar__text">Priority</div>
-        </div>
+        <div v-for="category in categories" class="app-sidebar__item">
+            <div
+                class="app-sidebar__dot"
+                :style="{ 'background-color': category.color }">
+            </div>
 
-        <div class="app-sidebar__item">
-            <div class="app-sidebar__dot app-sidebar__dot--next-week"></div>
-            <div class="app-sidebar__text">Next week</div>
-        </div>
-
-        <div class="app-sidebar__item">
-            <div class="app-sidebar__dot app-sidebar__dot--later"></div>
-            <div class="app-sidebar__text">Later</div>
+            <div class="app-sidebar__text">
+                {{ category.description }}
+            </div>
         </div>
 
         <div class="app-sidebar__add">
@@ -23,6 +19,7 @@
 </template>
 
 <script>
+    import { computed } from 'vue'
     import { useStore } from 'vuex'
 
     export default {
@@ -31,6 +28,14 @@
             const store = useStore()
 
             store.dispatch('categories/fetch')
+
+            const categories = computed(() => {
+                return store.state.categories.categories
+            })
+
+            return {
+                categories
+            }
         },
     }
 </script>

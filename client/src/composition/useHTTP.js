@@ -6,7 +6,7 @@ function useURL()
     }
 
     const authHeaders = {
-        'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem('iremember_user')).token,
+        'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem('iremember_user'))?.token,
     }
 
     /**

@@ -1,9 +1,230 @@
+[data-theme="light"] {
+    --color-primary: #3c4857;
+    --color-text: #212529;
+    --color-yin: #fff;
+    --color-yang: #000;
+    --color-joy: #cdcdcd;
+    --color-irony: #6c6c6c;
+    --color-harvest: #f6f6f6;
+    --color-hippo: #f4f4f4;
+    --color-dino: #ffffff12;
+    --color-cuddy: #ffffff1a;
+    --color-dawn: #ffffff26;
+    --color-penny: #ffffffc4;
+    --color-shazam: #ffffff8f;
+    --color-fighter: #ffffffbd;
+    --color-ninja: #f8f8f8;
+    --color-macho: #ff9898;
+    --color-beat: #ff8282;
+    --color-funky: #5c5c5c;
+    --color-boney: #8b8b8b;
+    --color-jovi: #f4f4f6;
+    --color-chacha: #cacaca;
+    --color-cheetah: gray;
+    --shadow-mac: drop-shadow(0 0 0.75rem #00000010);
+    --shadow-mountain: 0px 0px 10px -3px rgb(0 0 0 / 10%);
+    --shadow-salty: rgba(50, 50, 50, 0.1) 0px 0px 11px 0px;
+}
+
+[data-theme="dark"] {
+    --color-primary: #3c4857;
+    --color-text: #aaaaaa;
+    --color-yin: #000;
+    --color-yang: #fff;
+    --color-joy: #cdcdcd;
+    --color-irony: #6c6c6c;
+    --color-harvest: #f6f6f6;
+    --color-hippo: #303139;
+    --color-dino: #ffffff12;
+    --color-cuddy: #ffffff1a;
+    --color-dawn: #ffffff26;
+    --color-penny: #ffffffc4;
+    --color-shazam: #ffffff8f;
+    --color-fighter: #ffffffbd;
+    --color-ninja: #f8f8f8;
+    --color-macho: #ff9898;
+    --color-beat: #ff8282;
+    --color-funky: #5c5c5c;
+    --color-boney: #8b8b8b;
+    --color-jovi: #f4f4f6;
+    --color-chacha: #cacaca;
+    --color-cheetah: gray;
+    --shadow-mac: drop-shadow(0 0 0.75rem #00000010);
+    --shadow-mountain: 0px 0px 10px -3px rgb(0 0 0 / 10%);
+    --shadow-salty: rgba(50, 50, 50, 0.1) 0px 0px 11px 0px;
+}
+
+
+/**
+ * Dark theme
+ */
+/* [data-theme="dark"] .app-button {
+    border: 1px solid #000;
+    color: #000;
+}
+
+[data-theme="dark"] .app-button--login {
+    border-color: rgb(64, 70, 76);
+    background-color: rgb(64, 70, 76);
+    color: #aaaaaa;
+}
+
+[data-theme="dark"] .app-button--login:hover {
+    filter: brightness(1.1);
+}
+
+[data-theme="dark"] .app-button--notification {
+    border-color: #000;
+    color: #000;
+}
+
+[data-theme="dark"] .app-button--notification:hover {
+    background: #000;
+    color: #fff;
+}
+
+[data-theme="dark"] .home-main {
+    background: #303139;
+}
+
+/** Navbar **/
+[data-theme="dark"] .navbar {
+    background-color: #24262f;
+}
+
+[data-theme="dark"] .navbar__btn:hover {
+    background-color: #ffffff12;
+}
+
+[data-theme="dark"] .navbar__find {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .navbar__find:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="dark"] .navbar__find-input {
+    color: #ffffffc4;
+}
+
+[data-theme="dark"] .navbar__find-input::placeholder {
+    color: #ffffff8f;
+}
+
+[data-theme="dark"] .navbar__username {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffffbd;
+}
+
+/** App sidebar **/
+[data-theme="dark"] .app-sidebar {
+    background-color: #3b3c43;
+}
+
+[data-theme="dark"] .app-sidebar__item {
+    background: #4b4c52;
+}
+
+[data-theme="dark"] .app-sidebar__item:hover {
+    filter: drop-shadow(rgba(255, 255, 255, 0.063) 0px 0px 0.75rem);
+}
+
+[data-theme="dark"] .app-sidebar__add {
+    color: #aaaaaa;
+}
+
+[data-theme="dark"] .app-sidebar__add:hover .material-icons {
+    background: rgb(255 152 152 / 14%);
+    color: rgb(255 255 255 / 40%);
+}
+
+[data-theme="dark"] .app-sidebar__add .material-icons {
+    color: rgb(186 116 116);
+}
+
+[data-theme="dark"] .app-sidebar__text {
+    color: #aaaaaa;
+}
+
+[data-theme="dark"] .app-sidebar__dot {
+    opacity: .5;
+}
+
+
+/* Home tasks */
+[data-theme="dark"] .task {
+    background: #4b4c52;
+    box-shadow: none;
+}
+
+[data-theme="dark"] .task__title {
+    color: #aaaaaa;
+}
+
+[data-theme="dark"] .task__description {
+    color: #aaaaaa;
+    opacity: .9;
+}
+
+/** Login **/
+[data-theme="dark"] .login-page {
+    background-color: #1b1d24;
+}
+
+[data-theme="dark"] .login-box {
+    background: #2d2f35;
+}
+
+[data-theme="dark"] .login-box__logo-text {
+    color: #aaaaaa;
+}
+
+[data-theme="dark"] .login-box__title {
+    color: #aaaaaa;
+}
+
+[data-theme="dark"] .login-box__label {
+    color: #aaaaaa;
+}
+
+[data-theme="dark"] .login-box__input {
+    background-color: rgb(64, 70, 76);
+    border: 1px solid rgb(64, 70, 76);
+    color: #aaaaaa;
+}
+
+[data-theme="dark"] .login-box__input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/** Notification popup **/
+[data-theme="dark"] .notification-popup {
+    background: #2d2f35;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 11px 0px;
+    filter: brightness(1.1);
+}
+
+[data-theme="dark"] .notification-popup__title {
+    color: #aaaaaa;
+}
+
+[data-theme="dark"] .notification-popup__description {
+    color: #aaaaaa;
+} */
+
+
+
+
+
+
 .app-button {
     display: inline-block;
     padding: 6px 22px;
-    border: 1px solid #3c4857;
+    border: 1px solid var(--color-primary);
     border-radius: 3px;
-    color: #202020;
+    color: var(--color-primary);
     text-align: center;
     white-space: nowrap;
     cursor: pointer;
@@ -26,8 +247,8 @@
 }
 
 .app-button:hover {
-    background-color: #3c4857;
-    color: #fff;
+    background-color: var(--color-primary);
+    color: var(--color-text);
 }
 
 .app-button:active:hover {
@@ -35,9 +256,9 @@
 }
 
 .app-button--login {
-    border-color: #3c4857;
-    background-color: #3c4857;
-    color: #fff;
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-yin);
     width: 100%;
     padding: 12px 22px;
     margin-top: 10px;
@@ -45,23 +266,23 @@
 
 .app-button--login:hover {
     filter: brightness(1.2);
-    color: #fff;
+    color: var(--color-yin);
 }
 
 .app-button--notification {
     margin-right: 10px;
-    border-color: #cdcdcd;
-    color: #6c6c6c;
+    border-color: var(--color-joy);
+    color: var(--color-irony);
 }
 
 .app-button--notification:hover {
-    background: #f6f6f6;
-    color: #6c6c6c;
+    background: var(--color-harvest);
+    color: var(--color-irony);
 }
 
 .home-main {
     display: flex;
-    background: #f4f4f4;
+    background: var(--color-hippo);
     min-height: calc(100vh - 70px);
 }
 
@@ -73,7 +294,7 @@
 
 /** Navbar **/
 .navbar {
-    background-color: #3c4857;
+    background-color: var(--color-primary);
     display: flex;
     align-items: center;
     padding: 10px 20px;
@@ -89,7 +310,7 @@
 }
 
 .navbar__btn:hover {
-    background-color: #ffffff12;
+    background-color: var(--color-dino);
 }
 
 .navbar__find-container {
@@ -100,7 +321,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--color-cuddy);
     border-radius: 4px;
     padding: 9px 10px;
     margin-left: 20px;
@@ -115,7 +336,7 @@
 }
 
 .navbar__find:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--color-dawn);
 }
 
 .navbar__find-img {
@@ -127,17 +348,17 @@
 }
 
 .navbar__find-input {
-    color: #ffffffc4;
+    color: var(--color-penny);
     width: 100%;
 }
 
 .navbar__find-input::placeholder {
-    color: #ffffff8f;
+    color: var(--color-shazam);
 }
 
 .navbar__username {
-    background: rgba(255, 255, 255, 0.1);
-    color: #ffffffbd;
+    background: var(--color-cuddy);
+    color: var(--color-fighter);
     padding: 9px 13px;
     border-radius: 4px;
     margin-right: 20px;
@@ -167,7 +388,7 @@
 
 /** App sidebar **/
 .app-sidebar {
-    background-color: rgb(248 248 248);
+    background-color: var(--color-ninja);
     width: 450px;
     padding: 40px 50px;
 }
@@ -185,12 +406,12 @@
     transition: .4s;
     cursor: pointer;
     padding: 14px 18px;
-    background: #fff;
+    background: var(--color-yin);
     margin-bottom: 12px;
 }
 
 .app-sidebar__item:hover {
-    filter: drop-shadow(0 0 0.75rem #00000010);
+    filter: var(--shadow-mac);
 }
 
 .app-sidebar__dot {
@@ -200,18 +421,6 @@
     margin-right: 14px;
     position: relative;
     top: 1px;
-}
-
-.app-sidebar__dot--priority {
-    background: rgb(255 146 146);
-}
-
-.app-sidebar__dot--next-week {
-    background: rgb(190 212 242);
-}
-
-.app-sidebar__dot--later {
-    background: rgb(225 225 225);
 }
 
 .app-sidebar__text {
@@ -229,15 +438,15 @@
 }
 
 .app-sidebar__add:hover .material-icons {
-    background: rgb(255 152 152);
-    color: rgb(255, 255, 255);
+    background: var(--color-macho);
+    color: var(--color-yin);
 }
 
 .app-sidebar__add .material-icons {
     margin-right: 10px;
     font-size: 24px;
     padding: 2px;
-    color: #ff8282;
+    color: var(--color-beat);
     border-radius: 50%;
     transition: .1s;
 }
@@ -255,31 +464,27 @@
 }
 
 .task {
-    background: #fff;
+    background: var(--color-yin);
     padding: 20px 20px;
     border-radius: 10px;
     height: fit-content;
-    box-shadow: 0px 0px 10px -3px rgb(0 0 0 / 10%);
+    box-shadow: var(--shadow-mountain);
 }
 
 .task__title {
     font-weight: bold;
-    color: #5c5c5c;
+    color: var(--color-funky);
 }
 
 .task__description {
-    color: #8b8b8b;
+    color: var(--color-boney);
     margin-top: 10px;
-}
-
-.task--priority {
-    border-left: 2px solid #ffc8c8;
 }
 
 
 /** Login **/
 .login-page {
-    background-color: #f4f4f6;
+    background-color: var(--color-jovi);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -287,7 +492,7 @@
 }
 
 .login-box {
-    background: #fff;
+    background: var(--color-yin);
     border-radius: 10px;
     padding: 50px 50px;
     width: 600px;
@@ -323,7 +528,7 @@
 }
 
 .login-box__input {
-    border: 1px solid #cacaca;
+    border: 1px solid var(--color-chacha);
     border-radius: 5px;
     padding: 10px 10px;
     width: 100%;
@@ -337,11 +542,11 @@
     bottom: 50px;
     left: 50px;
     padding: 28px 34px;
-    background: rgb(255, 255, 255);
+    background: var(--color-yin);
     border-radius: 15px;
     justify-content: flex-start;
     align-items: center;
-    box-shadow: rgba(50, 50, 50, 0.1) 0px 0px 11px 0px;
+    box-shadow: var(--shadow-salty);
     max-width: 500px;
 }
 
@@ -355,7 +560,7 @@
 }
 
 .notification-popup__description {
-    color: gray;
+    color: var(--color-cheetah);
     font-size: 17px;
     margin-top: 4px;
     margin-bottom: 10px;
