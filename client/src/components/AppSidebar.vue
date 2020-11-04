@@ -24,16 +24,13 @@
 
 <script>
     import { useStore } from 'vuex'
-    import { onMounted } from 'vue'
 
     export default {
         setup()
         {
             const store = useStore()
 
-            onMounted(() => {
-                store.dispatch('categories/fetch')
-            })
+            store.dispatch('categories/fetch')
         },
     }
 </script>
