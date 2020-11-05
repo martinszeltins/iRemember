@@ -258,6 +258,16 @@
     transition: .1s;
 }
 
+.app-sidebar__categories-loading > div  {
+    transform: scale(.9);
+    filter: opacity(0.4) hue-rotate(195deg) grayscale(.5);
+}
+
+.app-sidebar__categories-loading  {
+    display: flex;
+    justify-content: center;
+}
+
 
 /* Home tasks */
 .home-tasks {

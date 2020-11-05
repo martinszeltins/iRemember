@@ -7,6 +7,7 @@ export default {
     {
         return {
             categories: [],
+            isLoading: false,
         }
     },
 
@@ -14,11 +15,14 @@ export default {
     {
         async fetch({ commit, rootState })
         {
+            commit('setLoading', true)
+            
             const categories = await Categories.fetch({
                 user_id: rootState.user.id
             })
-
+            
             commit('fetch', categories)
+            commit('setLoading', false)
         },
     },
 
@@ -27,6 +31,11 @@ export default {
         fetch(state, categories)
         {
             state.categories = categories
+        },
+
+        setLoading(state, isLoading)
+        {
+            state.isLoading = isLoading
         },
     },
 }

@@ -118,3 +118,8 @@
 [data-theme="dark"] .notification-popup__description {
     color: var(--color-text);
 }
+
+.app-sidebar__categories-loading > div  {
+    filter: grayscale(.98) brightness(2.3) hue-rotate(185deg);
+    opacity: .95;
+}
