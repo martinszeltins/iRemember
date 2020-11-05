@@ -1,0 +1,120 @@
+[data-theme="dark"] {
+    --color-primary: #3c4857;
+    --color-text: #aaaaaa;
+    --color-yin: #000;
+    --color-yang: #fff;
+    --color-joy: #cdcdcd;
+    --color-irony: #6c6c6c;
+    --color-harvest: #f6f6f6;
+    --color-hippo: #303139;
+    --color-dino: #ffffff12;
+    --color-cuddy: #ffffff1a;
+    --color-dawn: #ffffff26;
+    --color-penny: #ffffffc4;
+    --color-shazam: #ffffff8f;
+    --color-fighter: #ffffffbd;
+    --color-ninja: #3b3c43;
+    --color-macho: #ff989824;
+    --color-beat: #ba7474;
+    --color-funky: #5c5c5c;
+    --color-boney: #8b8b8b;
+    --color-jovi: #1b1d24;
+    --color-chacha: #40464c;
+    --color-cheetah: gray;
+    --color-gaga: #24262f;
+    --color-philly: #4b4c52;
+    --color-benq: #fff6;
+    --color-digest: #2d2f35;
+    --shadow-mac: drop-shadow(rgba(255, 255, 255, 0.063) 0px 0px 0.75rem);
+    --shadow-mountain: none;
+    --shadow-salty: rgba(255, 255, 255, 0.1) 0px 0px 11px 0px;
+}
+
+[data-theme="dark"] .navbar {
+    background-color: var(--color-gaga);
+}
+
+[data-theme="dark"] .app-sidebar__item {
+    background: var(--color-philly);
+}
+
+[data-theme="dark"] .task {
+    background: var(--color-philly);
+}
+
+[data-theme="dark"] .app-sidebar__add {
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .app-sidebar__text {
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .app-sidebar__add:hover .material-icons {
+    color: var(--color-benq);
+}
+
+[data-theme="dark"] .task__title {
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .task__description {
+    color: var(--color-text);
+    opacity: .9;
+}
+
+[data-theme="dark"] .app-sidebar__dot {
+    opacity: .5;
+}
+
+[data-theme="dark"] .login-box {
+    background: var(--color-digest);
+}
+
+[data-theme="dark"] .login-box__logo-text {
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .login-box__title {
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .login-box__label {
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .login-box__input {
+    background-color: var(--color-chacha);
+    border: 1px solid var(--color-chacha);
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .login-box__input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+[data-theme="dark"] .app-button--login {
+    border-color: var(--color-chacha);
+    background-color: var(--color-chacha);
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .app-button--login:hover {
+    filter: brightness(1.1);
+}
+
+
+[data-theme="dark"] .notification-popup {
+    background: var(--color-digest);
+    box-shadow: var(--shadow-salty);
+    filter: brightness(1.1);
+}
+
+[data-theme="dark"] .notification-popup__title {
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .notification-popup__description {
+    color: var(--color-text);
+}
