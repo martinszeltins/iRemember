@@ -1,4 +1,8 @@
 <template>
+    <teleport to="head">
+        <title>iRemember - login</title>
+    </teleport>
+
     <div class="login-page">
         <div class="login-box">
             <div class="login-box__logo">
@@ -45,8 +49,6 @@
         setup()
         {
             const { login, username, password, isLoading, userLoggedIn } = useAuth()
-
-            document.title = 'iRemember - login'
 
             if (userLoggedIn()) {
                 router.push({ name: "home" })

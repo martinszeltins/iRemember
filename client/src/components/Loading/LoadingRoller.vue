@@ -2,15 +2,6 @@
     <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 </template>
 
-<script>
-    export default {
-        setup()
-        {
-            
-        }
-    }
-</script>
-
 <style>
     .lds-roller {
         display: inline-block;
@@ -109,10 +100,11 @@
 
     @keyframes lds-roller {
         0% {
-        transform: rotate(0deg);
+            transform: rotate(0deg);
         }
+
         100% {
-        transform: rotate(360deg);
+            transform: rotate(360deg);
         }
     }
 </style>

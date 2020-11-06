@@ -1,4 +1,8 @@
 <template>
+    <teleport to="head">
+        <title>iRemember - all your tasks in one place</title>
+    </teleport>
+
     <app-navbar />
 
     <div class="home-main">
