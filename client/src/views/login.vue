@@ -7,7 +7,7 @@
         <div class="login-box">
             <div class="login-box__logo">
                 <img class="login-box__logo-img" src="/img/logo.png" />
-                <div class="login-box__logo-text">iRemember test</div>
+                <div class="login-box__logo-text">iRemember</div>
             </div>
 
             <div class="login-box__title">Log in</div>
